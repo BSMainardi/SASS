@@ -1,0 +1,28 @@
+body {
+  background-color: blue;
+  color: white;
+  font-weight: 800;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.main_paragraph {
+  justify-content: center;
+  font-style: italic;
+  align-items: center;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+@media (max-width: 800px) {
+  .light {
+    flex-direction: flex-direction (row);
+    background-color: green;
+  }
+}/*# sourceMappingURL=main.css.map */

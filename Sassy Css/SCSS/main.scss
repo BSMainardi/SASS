@@ -1,0 +1,61 @@
+@import '/SCSS/variables';
+@import '/SCSS/resets';
+
+
+@mixin flexContainer {
+    justify-content: center;
+    font-style: italic;
+    align-items: center;
+}
+
+@mixin theme ($light-theme : true) {
+    @if $light-theme {
+        background: lighten($background-color, 100%);
+        color: darken($text-color, 100%)
+    }
+
+}
+
+@mixin mobile {
+    @media (max-width: 800px) {
+        @content
+    }
+
+}
+
+@function weights ($weight-name) {
+    @return map-get($map: $font-weigth , $key: $weight-name );
+}
+
+@function flexdirection ($direction) {
+    @return $direction;
+}
+
+
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-weight: weights(italic);
+    // font-weight: map-get($map: $font-weigth, $key: italic );
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: flexdirection(row);
+
+    &_paragraph {
+        @include flexContainer()
+    }
+}
+
+.light {
+    @include theme($light-theme: true);
+
+    @include mobile {
+        flex-direction: column;
+        background-color: green;
+    }
+}
