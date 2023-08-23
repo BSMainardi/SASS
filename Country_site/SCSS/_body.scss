@@ -1,0 +1,75 @@
+body{
+    background-color: green;
+}
+
+
+.br_gallery {
+    margin: 5px;
+    border: 5px solid yellow;
+    float: left;
+    width: 450px;
+    height: 550px;
+    overflow: auto;
+
+    .br_gallery:hover {
+        border: 5px solid green;
+    }
+
+
+    &_title {
+        text-align: center;
+        border: solid 5px yellow;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.br_img {
+    width: auto;
+    height: 300px;
+
+}
+
+.br_desc {
+    padding: 15px;
+    text-align: justify;
+}
+
+
+.br_hist_text{
+    text-align: justify;
+    padding: 10px 50px;
+}
+.br_hist_title{
+    text-align: center;
+    border: solid 5px yellow;
+}
+
+
+.br_title {
+    text-align: center;
+
+    &_sub
+    {
+        text-align: center;
+        border: solid 5px yellow;    
+    }
+}
+
+
+.br_title2 {
+    text-align: center;
+
+    &_sub{
+    text-align: center;
+    border: solid 5px yellow;    
+}
+}
+
+
+
